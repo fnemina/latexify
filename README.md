@@ -25,17 +25,19 @@ import matplotlib.pyplot as plt
 from latexify import latexify
 
 x = np.linspace(0,2*np.pi)
-y = np.cos(x)
 
-latexify()
+latexify(columns=2)
 
-plt.plot(x,y, label="Cosine")
+plt.plot(x, np.cos(x), label="$\cos x$")
+plt.plot(x, np.sin(x), label="$\sin x$")
 
-plt.xlabel("Angle")
-plt.ylabel("Cosine")
+plt.xlabel("Angle $[^\circ]$")
 
 plt.legend()
 
-plt.savefig("test.pdf")
+plt.savefig("plot.pdf")
 ```
+
 ![Sine and cosine plot](img/plot.png?raw=true "Sine and cosine plot, converted from pdf to png using convert")
+
+![plot.pdf](img/plot.pdf)
