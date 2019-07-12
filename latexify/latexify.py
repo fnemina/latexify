@@ -1,6 +1,8 @@
 from math import sqrt
 import matplotlib
 
+SPINE_COLOR = 'gray'
+
 def latexify(fig_width=None, fig_height=None, columns=1):
     """Set up matplotlib's RC params for LaTeX plotting.
     Call this before plotting a figure.
