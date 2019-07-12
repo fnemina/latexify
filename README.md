@@ -34,6 +34,8 @@ plt.xlabel("Angle $[^\circ]$")
 
 plt.legend()
 
+plt.tight_layout()
+
 plt.savefig("plot.pdf")
 ```
 
