@@ -39,4 +39,12 @@ plt.savefig("plot.pdf")
 
 ![Sine and cosine plot](img/plot.png?raw=true "Sine and cosine plot, converted from pdf to png using convert")
 
-[plot.pdf](img/plot.pdf)
+You can check the [pdf file here.](img/plot.pdf)
+
+## png
+
+In general it's better to use pdf file in latex. However if you need to convert them to png the following command gives good results
+
+```bash
+mogrify -format png -alpha off -density 300 -quality 100 -resize 1200 -unsharp 1.5 *.pdf
+```
