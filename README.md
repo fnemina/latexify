@@ -40,4 +40,4 @@ plt.savefig("plot.pdf")
 
 ![Sine and cosine plot](img/plot.png?raw=true "Sine and cosine plot, converted from pdf to png using convert")
 
-![plot.pdf](img/plot.pdf)
+[plot.pdf](img/plot.pdf)
