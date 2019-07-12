@@ -38,3 +38,4 @@ plt.legend()
 
 plt.savefig("test.pdf")
 ```
+![Sine and cosine plot](img/plt.png?raw=true "Sine and cosine plot, converted from pdf to png using convert")
