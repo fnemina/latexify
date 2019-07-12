@@ -9,7 +9,6 @@ https://nipunbatra.github.io/blog/2014/latexify.html
 The following python packages are requiered
 
 - `matplotlib`
-- `math`
 
 ## Instalation
 
