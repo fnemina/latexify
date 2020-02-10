@@ -3,7 +3,7 @@ import matplotlib
 
 SPINE_COLOR = 'gray'
 
-def latexify(fig_width=None, fig_height=None, columns=1):
+def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False):
     """Set up matplotlib's RC params for LaTeX plotting.
     Call this before plotting a figure.
 
@@ -34,8 +34,8 @@ def latexify(fig_width=None, fig_height=None, columns=1):
               "so will reduce to" + MAX_HEIGHT_INCHES + "inches.")
         fig_height = MAX_HEIGHT_INCHES
 
-    params = {'backend': 'ps',
-              'text.latex.preamble': ['\\usepackage{gensymb}'],
+    params_fa = {'backend': 'ps',
+              'text.latex.preamble': ['\\usepackage{gensymb} \\usepackage{fontawesome}'],
               'axes.labelsize': 8, # fontsize for x and y labels (was 10)
               'axes.titlesize': 8,
               'font.size': 8, # was 10
@@ -47,7 +47,23 @@ def latexify(fig_width=None, fig_height=None, columns=1):
               'font.family': 'serif'
     }
 
-    matplotlib.rcParams.update(params)
+    params = {'backend': 'ps',
+              'text.latex.preamble': ['\\usepackage{gensymb} '],
+              'axes.labelsize': 8, # fontsize for x and y labels (was 10)
+              'axes.titlesize': 8,
+              'font.size': 8, # was 10
+              'legend.fontsize': 8, # was 10
+              'xtick.labelsize': 8,
+              'ytick.labelsize': 8,
+              'text.usetex': True,
+              'figure.figsize': [fig_width,fig_height],
+              'font.family': 'serif'
+    }
+
+    if fontawesome:
+        matplotlib.rcParams.update(params_fa)
+    else:
+        matplotlib.rcParams.update(params)
 
 
 def format_axes(ax):
