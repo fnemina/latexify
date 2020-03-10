@@ -38,7 +38,7 @@ def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False, siun
     preamble = ['\\usepackage{gensymb} ']
 
     if fontawesome:
-        preamble[0] = preamble[0]+'\\usepackage{fontawesome} '
+        preamble[0] = preamble[0]+'\\usepackage{fontawesome5} '
     if siunitx:
         preamble[0] = preamble[0]+'\\usepackage{siunitx} '
 
