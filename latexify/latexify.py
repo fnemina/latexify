@@ -43,7 +43,7 @@ def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False, siun
         preamble[0] = preamble[0]+'\\usepackage{siunitx} '
 
     params = {'backend': 'ps',
-              'text.latex.preamble': preamble,
+              'text.latex.preamble': preamble[0],
               'axes.labelsize': 8, # fontsize for x and y labels (was 10)
               'axes.titlesize': 8,
               'font.size': 8, # was 10

@@ -33,7 +33,7 @@ setup(
     name                  = "latexify",
     packages              = ['latexify'],
     install_requires      = REQS,
-    version               = "1.0",
+    version               = "1.1",
     author                = "Francisco Nemiña",
     author_email          = "fnemina@conae.gov.ar",
     description           = SHORT_DESCRIPTION,
