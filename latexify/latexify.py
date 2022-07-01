@@ -3,7 +3,7 @@ import matplotlib
 
 SPINE_COLOR = 'gray'
 
-def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False, siunitx=False):
+def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False, siunitx=False, poppins=False):
     """Set up matplotlib's RC params for LaTeX plotting.
     Call this before plotting a figure.
 
@@ -42,18 +42,34 @@ def latexify(fig_width=None, fig_height=None, columns=1, fontawesome=False, siun
     if siunitx:
         preamble[0] = preamble[0]+'\\usepackage{siunitx} '
 
-    params = {'backend': 'ps',
-              'text.latex.preamble': preamble[0],
-              'axes.labelsize': 8, # fontsize for x and y labels (was 10)
-              'axes.titlesize': 8,
-              'font.size': 8, # was 10
-              'legend.fontsize': 8, # was 10
-              'xtick.labelsize': 8,
-              'ytick.labelsize': 8,
-              'text.usetex': True,
-              'figure.figsize': [fig_width,fig_height],
-              'font.family': 'serif'
-    }
+
+    if poppins:
+            params = {'backend': 'ps',
+            'text.latex.preamble': preamble[0],
+            'axes.labelsize': 8, # fontsize for x and y labels (was 10)
+            'axes.titlesize': 8,
+            'font.size': 8, # was 10
+            'legend.fontsize': 8, # was 10
+            'xtick.labelsize': 8,
+            'ytick.labelsize': 8,
+            'text.usetex': True,
+            'figure.figsize': [fig_width,fig_height],
+            'font.family':'sans-serif',
+            'font.sans-serif':'Poppins'
+         }
+    else:
+        params = {'backend': 'ps',
+                'text.latex.preamble': preamble[0],
+                'axes.labelsize': 8, # fontsize for x and y labels (was 10)
+                'axes.titlesize': 8,
+                'font.size': 8, # was 10
+                'legend.fontsize': 8, # was 10
+                'xtick.labelsize': 8,
+                'ytick.labelsize': 8,
+                'text.usetex': True,
+                'figure.figsize': [fig_width,fig_height],
+                'font.family': 'serif'
+        }
 
     matplotlib.rcParams.update(params)
 
